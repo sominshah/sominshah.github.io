@@ -19,33 +19,47 @@
   </script>
   <style>
     .project-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 14px;
-      padding: 10px 0;
-      scroll-snap-type: x mandatory;
+      position: relative;
+      max-width: 600px;
+      margin: 20px auto;
     }
     .project-screenshot {
-      flex: 0 0 auto;
-      width: 250px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
       background: #fafafa;
       border: 1px solid #ddd;
       border-radius: 6px;
-      padding: 8px;
-      scroll-snap-align: start;
+      padding: 10px;
+    }
+    .project-screenshot.active {
       display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     .project-screenshot img {
-      width: 100%;
+      max-width: 100%;
       border-radius: 4px;
-      margin-bottom: 6px;
     }
     .project-screenshot p {
-      font-size: 12px;
+      font-size: 13px;
       color: #555;
+      margin-top: 8px;
       text-align: center;
+    }
+    .gallery-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .gallery-controls button {
+      padding: 6px 12px;
+      margin: 0 5px;
+      border: none;
+      background-color: #1e88e5;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .gallery-controls button:hover {
+      background-color: #1565c0;
     }
   </style>
 </head>
@@ -78,7 +92,7 @@
       <h3>🌐 Web Server in C (Multithreaded)</h3>
       <p>A custom-built HTTP 1.1 server written in C. Fast, lightweight, configurable, and supports multiple instances.</p>
       <div class="project-gallery">
-        <div class="project-screenshot">
+        <div class="project-screenshot active">
           <img src="server_started.png" alt="Server Started">
           <p>Server initialized with configured ports</p>
         </div>
@@ -93,6 +107,10 @@
         <div class="project-screenshot">
           <img src="app-demo-2.png" alt="App Demo 2">
           <p>Client-side demo view of served app</p>
+        </div>
+        <div class="gallery-controls">
+          <button onclick="showSlide(-1)">Previous</button>
+          <button onclick="showSlide(1)">Next</button>
         </div>
       </div>
     </div>
@@ -110,5 +128,16 @@
       <li><strong>🔧 REST API Tool (Python):</strong> A RESTful API tool using Python that supports all core HTTP methods (GET, POST, PUT, DELETE). Built with a clean structure for creating lightweight web services.</li>
     </ul>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.project-screenshot');
+
+    function showSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
 </body>
 </html>
