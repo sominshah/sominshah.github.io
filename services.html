@@ -1,3 +1,44 @@
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.project-gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+#lightbox:target {
+  display: flex;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,76 +50,40 @@
   <meta property="og:title" content="Somin Ali – Portfolio">
   <meta property="og:image" content="images/og-thumbnail.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-
-<style >
-  
-
-      .project-gallery {
-      position: relative;
-      max-width: 600px;
-      margin: 20px auto;
+  <style>
+    .project-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 10px 0;
     }
-    .project-screenshot {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      background: #fafafa;
-      border: 1px solid #ddd;
+    .project-gallery-grid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 6px;
-      padding: 10px;
-    
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin: 0 auto;
-
-    }
-
-
-    .project-screenshot.active {
-      display: flex;
-    }
-.project-screenshot img {
-  width: 100%;
-  max-width: 400px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  display: block;
-}
-
-    .project-screenshot p {
-      font-size: 13px;
-      color: #555;
-      margin-top: 8px;
-      text-align: center;
-    }
-    .gallery-controls {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .gallery-controls button {
-      padding: 6px 12px;
-      margin: 0 5px;
-      border: none;
-      background-color: #1e88e5;
-      color: white;
-      border-radius: 4px;
       cursor: pointer;
+      transition: transform 0.2s ease-in-out;
     }
-    .gallery-controls button:hover {
-      background-color: #1565c0;
+    .project-gallery-grid img:hover {
+      transform: scale(1.05);
     }
-</style>
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -108,84 +113,45 @@
     <div class="project">
       <h3>🌐 Web Server in C (Multithreaded)</h3>
       <p>A custom-built HTTP 1.1 server written in C. Fast, lightweight, configurable, and supports multiple instances.</p>
-      <div class="project-gallery">
-        <div class="project-screenshot active">
-          <img src="server_started.png" alt="Server Started">
-          <p>Server initialized with configured ports</p>
-        </div>
-        <div class="project-screenshot">
-          <img src="recived_request.png" alt="Received Request">
-          <p>Handling concurrent HTTP requests</p>
-        </div>
-        <div class="project-screenshot">
-          <img src="app-demo.png" alt="App Demo">
-          <p>Serving a web app over local network</p>
-        </div>
-        <div class="project-screenshot">
-          <img src="app-demo-2.png" alt="App Demo 2">
-          <p>Client-side demo view of served app</p>
-        </div>
-        <div class="gallery-controls">
-          <button onclick="showSlide(-1)">Previous</button>
-          <button onclick="showSlide(1)">Next</button>
-        </div>
+      <div class="project-gallery-grid">
+        <img src="server_started.png" alt="Screenshot 1" onclick="openLightbox(this)">
+        <img src="recived_request.png" alt="Screenshot 2" onclick="openLightbox(this)">
+        <img src="app-demo.png" alt="Screenshot 3" onclick="openLightbox(this)">
+        <img src="app-demo-2.png" alt="Screenshot 4" onclick="openLightbox(this)">
       </div>
     </div>
-
-
-
-
-
-
 
     <!-- Project 2 -->
     <div class="project">
       <h3>🕹️ Highrise VR Game Bot (Node.js)</h3>
-      <p> A Node.js-based automation bot for the virtual reality social game <em>Highrise</em>. The bot interacts with room guests—welcoming them, dancing, chatting, teleporting, and responding to predefined commands. It also supports developer commands that let you dynamically control and modify its behavior in real time, making it both interactive and programmable.</p>
-      <div class="project-gallery">
-        <div class="project-screenshot active">
-          <img src="images/loop_command.jpeg" alt="Server Started">
-          <p>Loop Command for performing repeat actions like dance or emotes.</p>
-        </div>
-       
-        <div class="project-screenshot">
-          <img src="say_hello.jpeg" alt="App Demo 2">
-          <p>Say Hello...</p>
-        </div>
-       
-        <div class="gallery-controls">
-          <button onclick="showSlide(-1)">Previous</button>
-          <button onclick="showSlide(1)">Next</button>
-        </div>
+      <p>A Node.js-based automation bot for the virtual reality social game <em>Highrise</em>. The bot interacts with room guests—welcoming them, dancing, chatting, teleporting, and responding to predefined commands. It also supports developer commands that let you dynamically control and modify its behavior in real time.</p>
+      <div class="project-gallery-grid">
+        <img src="images/loop_command.jpeg" alt="Loop Command" onclick="openLightbox(this)">
+        <img src="say_hello.jpeg" alt="Say Hello" onclick="openLightbox(this)">
       </div>
     </div>
-
-
-
-
-
-
 
     <!-- Project List Summary -->
     <ul>
       <li><strong>📁 FTP Application (Java):</strong> A Java-based FTP tool designed to transfer large files reliably and efficiently across systems.</li>
-
       <li><strong>🔐 Captcha Engine (Java):</strong> A lightweight, flexible captcha generator for Java web apps. Easily pluggable, with smooth integration and customization support.</li>
-
       <li><strong>🧩 Generic Client-Server Programming Framework:</strong> A Java-based framework that abstracts socket handling. Helps developers build multi-client/multi-server apps without writing raw socket code repeatedly.</li>
-
       <li><strong>🔧 REST API Tool (Python):</strong> A RESTful API tool using Python that supports all core HTTP methods (GET, POST, PUT, DELETE). Built with a clean structure for creating lightweight web services.</li>
     </ul>
   </div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.project-screenshot');
+  <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
 
-    function showSlide(direction) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
     }
   </script>
 </body>
