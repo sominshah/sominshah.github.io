@@ -1,6 +1,24 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
+@media (max-width: 768px) {
+
+  .cert-card, .edu-card {
+    padding: 10px;
+  }
+  .cert-logo, .edu-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cert-scroll-vertical {
+    max-height: 300px;
+  }
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  font-size: 16px;
 }
 
 .container {
@@ -32,9 +51,10 @@ h1 {
 
 nav {
   background-color: #2c3e50;
-  padding: 15px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+    padding: 10px 5px;
 }
 
 nav a {
@@ -142,10 +162,11 @@ section h2 {
 
 .grid-2-col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  margin-top: 20px;
 }
+
+
 
 .grid-item {
   display: flex;
