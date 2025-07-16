@@ -3,20 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Projects - Somin Ali</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" href="images/favicon.png" type="image/png">
-<meta name="description" content="Somin Ali – Software Engineer | Portfolio showcasing projects, system design, and certifications.">
-<meta property="og:title" content="Somin Ali – Portfolio">
-<meta property="og:image" content="images/og-thumbnail.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX');
-</script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <meta name="description" content="Somin Ali – Software Engineer | Portfolio showcasing projects, system design, and certifications.">
+  <meta property="og:title" content="Somin Ali – Portfolio">
+  <meta property="og:image" content="images/og-thumbnail.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <style>
+    .project-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 14px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+    }
+    .project-screenshot {
+      flex: 0 0 auto;
+      width: 250px;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-screenshot img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .project-screenshot p {
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -42,25 +73,33 @@ gtag('config', 'G-XXXXXXX');
 
     <h2>Personal Projects</h2>
 
+    <!-- Project 1 -->
+    <div class="project">
+      <h3>🌐 Web Server in C (Multithreaded)</h3>
+      <p>A custom-built HTTP 1.1 server written in C. Fast, lightweight, configurable, and supports multiple instances.</p>
+      <div class="project-gallery">
+        <div class="project-screenshot">
+          <img src="server_started.png" alt="Server Started">
+          <p>Server initialized with configured ports</p>
+        </div>
+        <div class="project-screenshot">
+          <img src="recived_request.png" alt="Received Request">
+          <p>Handling concurrent HTTP requests</p>
+        </div>
+        <div class="project-screenshot">
+          <img src="app-demo.png" alt="App Demo">
+          <p>Serving a web app over local network</p>
+        </div>
+        <div class="project-screenshot">
+          <img src="app-demo-2.png" alt="App Demo 2">
+          <p>Client-side demo view of served app</p>
+        </div>
+      </div>
+    </div>
 
-<div class="project">
-  <h3>🌐 Web Server in C (Multithreaded)</h3>
-  <p>A custom-built HTTP 1.1 server written in C. Fast, lightweight, configurable, and supports multiple instances.</p>
-  <div class="gallery">
-    <img src="server_started.png" alt="Web Server Screenshot 1" >
-   <img src="recived_request.png" alt="Web Server Screenshot 2" >
-   <img src="app-demo.png" alt="Web Server Screenshot 2" >
-   <img src="app-demo-2.png" alt="app demo 2" >
-  </div>
-</div>
-
+    <!-- Project List Summary -->
     <ul>
-      <li><strong>🌐 Web Server in C (Multithreaded):</strong> A custom-built HTTP 1.1 web server written in C from scratch. Fast, lightweight, multithreaded, and highly configurable. Supports multiple server instances on multiple ports. Just drop your app and it's ready to serve.</li>
-
-
-
-<li><strong>🕹️ Highrise VR Game Bot (Node.js):</strong> A Node.js-based automation bot for the virtual reality social game <em>Highrise</em>. The bot interacts with room guests—welcoming them, dancing, chatting, teleporting, and responding to predefined commands. It also supports developer commands that let you dynamically control and modify its behavior in real time, making it both interactive and programmable.</li>
-
+      <li><strong>🕹️ Highrise VR Game Bot (Node.js):</strong> A Node.js-based automation bot for the virtual reality social game <em>Highrise</em>. The bot interacts with room guests—welcoming them, dancing, chatting, teleporting, and responding to predefined commands. It also supports developer commands that let you dynamically control and modify its behavior in real time, making it both interactive and programmable.</li>
 
       <li><strong>📁 FTP Application (Java):</strong> A Java-based FTP tool designed to transfer large files reliably and efficiently across systems.</li>
 
@@ -69,14 +108,7 @@ gtag('config', 'G-XXXXXXX');
       <li><strong>🧩 Generic Client-Server Programming Framework:</strong> A Java-based framework that abstracts socket handling. Helps developers build multi-client/multi-server apps without writing raw socket code repeatedly.</li>
 
       <li><strong>🔧 REST API Tool (Python):</strong> A RESTful API tool using Python that supports all core HTTP methods (GET, POST, PUT, DELETE). Built with a clean structure for creating lightweight web services.</li>
-
-
-
-
     </ul>
   </div>
 </body>
 </html>
-
-
-
