@@ -1,0 +1,276 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #2c3e50;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.resume-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #1abc9c;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.resume-link:hover {
+  background-color: #16a085;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+.card {
+  background-color: #fefefe;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.education .card, .certifications .card {
+  margin-bottom: 10px;
+}
+
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+section {
+  margin-top: 10px;
+}
+
+section ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+section h2 {
+  color: #2c3e50;
+
+}
+
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.card {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  margin: 0 0 5px;
+}
+
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+
+
+.cert-scroll-vertical {
+  max-height: 300px; 
+  overflow-y: auto;
+  padding-right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.cert-scroll-vertical::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cert-scroll-vertical::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+.cert-card {
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  background-color: rgba(144, 238, 144, 0.15);
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.cert-logo {
+  width: 28px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.cert-card h4 {
+  font-size: 14px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.cert-card p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.cert-card a {
+  font-size: 12px;
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+.cert-card a:hover {
+  text-decoration: underline;
+}
+
+.edu-card {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.edu-logo {
+  width: 100px;
+  height: 50px;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 6px;
+  background: #fff;
+  padding: 2px;
+  flex-shrink: 0;
+}
