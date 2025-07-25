@@ -407,3 +407,9 @@ button:hover {
   background: #fff;
   color: #007bff;
 }
+
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+}
