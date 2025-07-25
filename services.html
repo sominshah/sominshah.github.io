@@ -9,40 +9,6 @@
   <meta property="og:title" content="Somin Ali – Portfolio">
   <meta property="og:image" content="images/og-thumbnail.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .project-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin: 10px 0;
-    }
-    .project-gallery-grid img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-    }
-    .project-gallery-grid img:hover {
-      transform: scale(1.05);
-    }
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-    }
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -56,15 +22,129 @@
     <h1>Key Projects!</h1>
 
     <h2>Professional Projects at <a href="https://volttic.com/">Volttic</a></h2>
-    <ul>
-      <li><strong>EV Charging Ecosystem:</strong> Delivered infrastructure connecting 10,000+ chargers and 500k+ users. Java, WebSocket, Spring Boot.</li>
-      <li><strong>OCPI Protocol Integration:</strong> Built EV roaming communication using OCPI 2.2.1 & WebSocket.</li>
-      <li><strong>Telematics Platform:</strong> Real-time EV battery & GPS monitoring platform using J2EE and MongoDB.</li>
-      <li><strong>B2B Billing System:</strong> Automated invoicing for CAPEX/OPEX models using Java, iText PDF, POI.</li>
-      <li><strong>Notification System:</strong> Email, SMS, and push alert microservice using JavaMail & REST.</li>
-      <li><strong>OCPP 1.6 Implementation:</strong> Real-time charger-to-server communication framework.</li>
-      <li><strong>EV Android App:</strong> User app for charger discovery, booking, and history.</li>
-    </ul>
+
+
+  <div class="project">
+      <h3> B2B Billing System</a></h3>
+      <p>  Developed a web-based billing platform for managing B2B EV charger accounts (rental/revenue-share). Solved challenges in manual billing, payment delays, and ledger maintenance by introducing automated billing cycles, real-time tracking, and smart blocking mechanisms.</p>
+      <ul>
+        <li>✔️ Multi-account structure with billing contacts and machine-level tracking</li>
+        <li>✔️ Real-time GST-inclusive billing, quota rating, and auto-blocking</li>
+        <li>✔️ Monthly reminders, credit/debit logs, and status-based charging control</li>
+      </ul>
+
+  <p><strong>Tech Stack:</strong> Java, Spring Boot, JavaMail, MySQL, MongoDB, jQuery, Bootstrap, PDFBox, third-party SMS API</p>
+
+    </div>
+
+
+
+
+  <div class="project">
+  <h3>OCPI 2.2.1 Protocol Integration</h3>
+  <p>
+    Built a dynamic EV roaming framework using OCPI 2.2.1, enabling seamless communication across all role types like CPO, EMSP, NSP, NAP, SCSP, and Hubs. The system smartly handles sender/receiver modules (e.g., CDRs, Sessions, Tariffs) based on the partner's role without requiring code changes.
+  </p>
+  <ul>
+    <li>✔️ Real-time onboarding of clients and auto-detection of role mappings</li>
+    <li>✔️ Modular, spec-compliant OCPI implementation with dynamic role selection</li>
+    <li>✔️ Unified framework for sender/receiver interfaces across all modules</li>
+    <li>✔️ Web UI to onboard and initiate communication with any OCPI-compliant party</li>
+  </ul>
+  <p><strong>Tech Stack:</strong> Java, J2EE, JSP, MySQL, MongoDB, jQuery, Bootstrap, JavaScript, CSS</p>
+</div>
+
+
+
+
+<div class="project">
+  <h2>OCPP 1.6 Implementation</h2>
+  <p>
+    Built a real-time charger-to-server communication system using Open Charge Point Protocol (OCPP 1.6) for remote monitoring and control of EV chargers.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>✔️ Remote & Local Start/Stop Transactions (mobile app triggered)</li>
+    <li>✔️ Firmware Updates & Diagnostics File Download</li>
+    <li>✔️ Local Authorization List (offline mode)</li>
+    <li>✔️ Authorization Cache for quick lookup</li>
+    <li>✔️ View & Modify Charger Configuration Remotely</li>
+    <li>✔️ Periodic Trigger Messages (e.g., Status, Heartbeat)</li>
+    <li>✔️ Charger auto-disconnect on abnormal behavior</li>
+    <li>✔️ Enhanced security via per-charger custom key</li>
+  </ul>
+
+  <h3>Smart Charging & Safety</h3>
+  <ul>
+    <li>✔️ VIN-based EV Recognition & Access Control</li>
+    <li>✔️ Charging Block/Unblock by VIN</li>
+    <li>✔️ Real-Time Temperature Monitoring & Control</li>
+  </ul>
+
+  <p><strong>Tech Stack:</strong> Java, Spring Boot, MQTT/WebSocket, MySQL, MongoDB</p>
+</div>
+
+
+
+<div class="project">
+  <h2>Telematics-Based Smart Charging Insights</h2>
+  <p>
+    Integrated with telematics devices installed in EVs to collect real-time data and generate smart charging recommendations and behavioral insights.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>✔️ Received real-time vehicle data (speed, temperature, battery, GPS)</li>
+    <li>✔️ Suggested Slow/Fast Charging based on usage & charging history</li>
+    <li>✔️ Alerted EV owner with intelligent recommendations via SMS & Email</li>
+    <li>✔️ Notified station owner of vehicle behavior (e.g., fast acceleration, low battery, temperature alerts)</li>
+    <li>✔️ Visualized GPS history with path tracing on Google Maps</li>
+    <li>✔️ Charging cycle history with performance graphs and statistics</li>
+  </ul>
+
+  <p><strong>Tech Stack:</strong> Java, J2EE, WebSocket, JavaScript, MongoDB, MySQL, Google Charts, Chart.js, Google Maps, SMS API, JavaMail</p>
+</div>
+
+<div class="project">
+  <h2>Notification System</h2>
+  <p>
+    Built a centralized notification microservice to deliver real-time alerts to users and EV stakeholders via multiple channels.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>✔️ Email alerts using JavaMail</li>
+    <li>✔️ SMS notifications via third-party APIs</li>
+    <li>✔️ REST-based push notifications integration</li>
+    <li>✔️ Supports scheduled and trigger-based messages</li>
+    <li>✔️ Easily pluggable with EV systems for status alerts and recommendations</li>
+  </ul>
+
+  <p><strong>Tech Stack:</strong> Java, REST APIs, JavaMail, SMS Gateway APIs</p>
+</div>
+
+
+<div class="project">
+  <h2>EV Charging Simulator</h2>
+  <p>
+    Developed a desktop-based simulator that emulates real-world EV chargers and communicates with the central server using OCPP 1.6 over WebSocket.
+  </p>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li>✔️ Add, edit, and delete multiple simulated EV chargers</li>
+    <li>✔️ Establish WebSocket connections with the OCPP server</li>
+    <li>✔️ Simulates all key functionalities of real charging stations</li>
+    <li>✔️ Multi-charger parallel simulation using multithreading</li>
+  </ul>
+
+  <p><strong>Tech Stack:</strong> Java, AWT/Swing, Tyrus (WebSocket), Multithreading, Jackson</p>
+</div>
+
+
+
+
 
     <h2>Personal Projects</h2>
 
@@ -90,20 +170,24 @@
     </div>
 
 
+
+
+
+
+
+
  <!-- Project 3 -->
     <div class="project">
       <h3>🧩 <a href="https://github.com/sominshah/Generic-Client-Server-Programming-Framework?tab=readme-ov-file"> Generic Client-Server Programming Framework</a></h3>
    <p> A reusable Java framework that allows developers to build multi-client and multi-server systems without writing raw socket code. It abstracts the underlying complexity of socket communication, providing a modular and scalable interface for client-server interactions. Ideal for real-time applications, simulation environments, or testing protocols.</a>
-
     </div>
-
 
 
      <!-- Project 4 -->
 <div class="project">
       <h3>📚 <a href="https://github.com/sominshah/Library-Automation-Layered-Architecture/tree/master/library">Library Automation System (Java Desktop App) </a></h3>
       <p>A desktop-based Java application designed to manage library operations. Currently, it includes the complete Author module with full CRUD (Create, Read, Update, Delete) functionality. Planned modules include Books, Members, and Transactions. The application also supports generating PDF reports of authors using the iText PDF library.</p>
-	<div class="project-gallery-grid">
+  <div class="project-gallery-grid">
         <img src="images/library_automation_add.png" alt="Library Automation Add" onclick="openLightbox(this)">
         <img src="images/library_automation_delete.png" alt="Library Automation Delete" onclick="openLightbox(this)">
         <img src="images/library_automation_pdf.png" alt="Library Automation PDF" onclick="openLightbox(this)">
@@ -111,6 +195,11 @@
 
     </div>
 
+
+    <div class="project">
+      <h3>📁 <a href="https://github.com/sominshah/data-structures-generic-library-c/tree/main"> Generic Data Structures Library in C</a></h3>
+   <p> A modular, memory-safe, and reusable data structure library written in C. Supports generic types using void* and includes core modules like stack, queue, linked lists, BST, and heap. Designed with iterator support, modular structure, and CMake build system. Ideal for learning and real-world use in C projects.</a>
+    </div>
 
 
      <!-- Project 4 -->
