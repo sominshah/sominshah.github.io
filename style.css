@@ -413,3 +413,32 @@ button:hover {
   list-style: none;
   padding-left: 0;
 }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.intro-video .video-note {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.intro-video .video-note a { 
+  color: #2563eb; 
+  text-decoration: none; 
+}
