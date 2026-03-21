@@ -344,6 +344,13 @@ nav a.nav-live-demo:hover {
   flex-shrink: 0;
   white-space: nowrap;
 }
+.credentials-note {
+  margin: 0.6em 0 0;
+  font-size: 0.78rem;
+  color: var(--teal);
+  opacity: 0.85;
+  font-style: italic;
+}
 
 /* ======================== */
 /* What I Do                */
