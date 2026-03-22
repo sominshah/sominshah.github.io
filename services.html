@@ -117,91 +117,76 @@
 
   <!-- Volttic Section -->
   <h2 class="section-employer-title">🏢 Volttic <span class="employer-tag">Live in Production</span></h2>
-  <p class="employer-desc">The following systems were designed, built, and deployed as part of my work at Volttic — all live in production.</p>
+  <p class="employer-desc">
+    The following systems were built during my time at Volttic and are live in production.
+    Details are shared at a high level out of respect for confidentiality obligations.
+    <span class="nda-note">🔒 Specific implementation details, business logic, and internal architecture are kept confidential per NDA.</span>
+  </p>
 
   <div class="project">
     <h3>B2B Billing System</h3>
-    <p>Developed a web-based billing platform for managing B2B EV charger accounts (rental/revenue-share). Solved challenges in manual billing, payment delays, and ledger maintenance by introducing automated billing cycles, real-time tracking, and smart blocking mechanisms.</p>
+    <p>Designed and developed a web-based billing platform to manage B2B accounts for EV charging infrastructure. The system handled automated billing cycles, payment tracking, and account management for charging operators.</p>
     <ul>
-      <li>✔️ Multi-account structure with billing contacts and machine-level tracking</li>
-      <li>✔️ Real-time GST-inclusive billing, quota rating, and auto-blocking</li>
-      <li>✔️ Monthly reminders, credit/debit logs, and status-based charging control</li>
+      <li>✔️ Automated billing and account lifecycle management</li>
+      <li>✔️ Real-time usage tracking and financial controls</li>
+      <li>✔️ Multi-channel communication for billing events</li>
     </ul>
-    <p><strong>Tech Stack:</strong> Java, webservice framework, JavaMail, MySQL, MongoDB, jQuery, Bootstrap 4, third-party SMS API</p>
+    <p><strong>Tech Stack:</strong> Java, MySQL, MongoDB, jQuery, Bootstrap, JavaMail, SMS API</p>
   </div>
 
   <div class="project">
     <h3>OCPI 2.2.1 Protocol Integration</h3>
-    <p>Built a dynamic EV roaming framework using OCPI 2.2.1, enabling seamless communication across all role types like CPO, EMSP, NSP, NAP, SCSP, and Hubs. The system smartly handles sender/receiver modules (e.g., CDRs, Sessions, Tariffs) based on the partner's role without requiring code changes.</p>
+    <p>Implemented the Open Charge Point Interface (OCPI 2.2.1) standard to enable EV roaming between charging networks. Built a spec-compliant, role-aware integration layer supporting multiple OCPI roles and modules.</p>
     <ul>
-      <li>✔️ Real-time onboarding of clients and auto-detection of role mappings</li>
-      <li>✔️ Modular, spec-compliant OCPI implementation with dynamic role selection</li>
-      <li>✔️ Unified framework for sender/receiver interfaces across all modules</li>
-      <li>✔️ Web UI to onboard and initiate communication with any OCPI-compliant party</li>
+      <li>✔️ Compliant with the public OCPI 2.2.1 specification</li>
+      <li>✔️ Supports multiple operator roles (CPO, EMSP, Hub, etc.)</li>
+      <li>✔️ Modular integration framework for cross-network interoperability</li>
     </ul>
-    <p><strong>Tech Stack:</strong> Java, J2EE, JSP, MySQL, MongoDB, jQuery, Bootstrap, JavaScript, CSS</p>
+    <p><strong>Tech Stack:</strong> Java, J2EE, MySQL, MongoDB, jQuery, Bootstrap</p>
   </div>
 
   <div class="project">
     <h3>OCPP 1.6 Implementation</h3>
-    <p>Built a real-time charger-to-server communication system using Open Charge Point Protocol (OCPP 1.6) for remote monitoring and control of EV chargers.</p>
-    <h4>Key Features</h4>
+    <p>Built a real-time communication system between EV chargers and the central server using the OCPP 1.6 protocol over WebSocket. Covered core and advanced profiles as defined in the public specification.</p>
     <ul>
-      <li>✔️ Remote &amp; Local Start/Stop Transactions (mobile app triggered)</li>
-      <li>✔️ Firmware Updates &amp; Diagnostics File Download</li>
-      <li>✔️ Local Authorization List (offline mode)</li>
-      <li>✔️ Authorization Cache for quick lookup</li>
-      <li>✔️ View &amp; Modify Charger Configuration Remotely</li>
-      <li>✔️ Periodic Trigger Messages (e.g., Status, Heartbeat)</li>
-      <li>✔️ Charger auto-disconnect on abnormal behavior</li>
-      <li>✔️ Enhanced security via per-charger custom key</li>
+      <li>✔️ Compliant with OCPP 1.6 Core &amp; Smart Charging profiles</li>
+      <li>✔️ Remote charger monitoring and control</li>
+      <li>✔️ Real-time event handling and session management</li>
     </ul>
-    <h4>Smart Charging &amp; Safety</h4>
-    <ul>
-      <li>✔️ VIN-based EV Recognition &amp; Access Control</li>
-      <li>✔️ Charging Block/Unblock by VIN</li>
-      <li>✔️ Real-Time Temperature Monitoring &amp; Control</li>
-    </ul>
-    <p><strong>Tech Stack:</strong> Java, Spring Boot, MQTT/WebSocket, MySQL, MongoDB</p>
+    <p><strong>Tech Stack:</strong> Java, Spring Boot, WebSocket, MySQL, MongoDB</p>
   </div>
 
   <div class="project">
     <h3>Telematics-Based Smart Charging Insights</h3>
-    <p>Integrated with telematics devices installed in EVs to collect real-time data and generate smart charging recommendations and behavioral insights.</p>
+    <p>Integrated telematics data from EVs to generate smart charging recommendations and behavioral insights for drivers and operators. Involved real-time data processing, location tracking, and proactive alerting.</p>
     <ul>
-      <li>✔️ Received real-time vehicle data (speed, temperature, battery, GPS)</li>
-      <li>✔️ Suggested Slow/Fast Charging based on usage &amp; charging history</li>
-      <li>✔️ Alerted EV owner with intelligent recommendations via SMS &amp; Email</li>
-      <li>✔️ Notified station owner of vehicle behavior (e.g., fast acceleration, low battery, temperature alerts)</li>
-      <li>✔️ Visualized GPS history with path tracing on Google Maps</li>
-      <li>✔️ Charging cycle history with performance graphs and statistics</li>
+      <li>✔️ Real-time vehicle telemetry processing</li>
+      <li>✔️ Data-driven charging recommendations</li>
+      <li>✔️ Multi-channel alert delivery and visualization</li>
     </ul>
-    <p><strong>Tech Stack:</strong> Java, J2EE, WebSocket, JavaScript, MongoDB, MySQL, Google Charts, Chart.js, Google Maps, SMS API, JavaMail</p>
+    <p><strong>Tech Stack:</strong> Java, WebSocket, MongoDB, MySQL, Google Maps, Chart.js, JavaMail, SMS API</p>
   </div>
 
   <div class="project">
     <h3>Notification System</h3>
-    <p>Built a centralized notification microservice to deliver real-time alerts to users and EV stakeholders via multiple channels.</p>
+    <p>Built a centralized notification service to deliver real-time alerts across multiple channels to EV operators, drivers, and system stakeholders.</p>
     <ul>
-      <li>✔️ Email alerts using JavaMail</li>
-      <li>✔️ SMS notifications via third-party APIs</li>
-      <li>✔️ REST-based push notifications integration</li>
-      <li>✔️ Supports scheduled and trigger-based messages</li>
-      <li>✔️ Easily pluggable with EV systems for status alerts and recommendations</li>
+      <li>✔️ Multi-channel delivery: Email, SMS, Push</li>
+      <li>✔️ Trigger-based and scheduled notification support</li>
+      <li>✔️ Designed as a pluggable microservice</li>
     </ul>
-    <p><strong>Tech Stack:</strong> Java, REST APIs, JavaMail, SMS Gateway APIs</p>
+    <p><strong>Tech Stack:</strong> Java, REST APIs, JavaMail, SMS Gateway</p>
   </div>
 
   <div class="project">
     <h3>EV Charging Simulator</h3>
-    <p>Developed a desktop-based simulator that emulates real-world EV chargers and communicates with the central server using OCPP 1.6 over WebSocket.</p>
+    <p>Developed a desktop-based simulator to emulate EV charger behaviour for testing and development purposes, communicating with the central server over OCPP 1.6 WebSocket.</p>
     <ul>
-      <li>✔️ Add, edit, and delete multiple simulated EV chargers</li>
-      <li>✔️ Establish WebSocket connections with the OCPP server</li>
-      <li>✔️ Simulates all key functionalities of real charging stations</li>
-      <li>✔️ Multi-charger parallel simulation using multithreading</li>
+      <li>✔️ Multi-charger simulation with concurrent connections</li>
+      <li>✔️ Useful for load testing and OCPP protocol validation</li>
+      <li>✔️ Fully standalone desktop application</li>
     </ul>
-    <p><strong>Tech Stack:</strong> Java, AWT/Swing, Tyrus (WebSocket), Multithreading, Jackson</p>
+    <p><strong>Tech Stack:</strong> Java, AWT/Swing, WebSocket, Multithreading</p>
   </div>
 
 

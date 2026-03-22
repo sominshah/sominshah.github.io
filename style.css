@@ -805,6 +805,13 @@ li {
   font-size: 0.95rem;
   margin-bottom: 1.2em;
 }
+.nda-note {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
 
 /* ======================== */
 /* Project Cards            */
