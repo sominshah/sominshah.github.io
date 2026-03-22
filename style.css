@@ -171,7 +171,8 @@ nav a.nav-live-demo:hover {
 }
 
 .hero-avatar-wrap {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1em;
 }
 .hero-avatar {
