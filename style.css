@@ -269,8 +269,8 @@ nav a.nav-live-demo:hover {
   display: inline-block;
   padding: 0.72em 1.6em;
   background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-  color: #0f172a;
-  text-decoration: none;
+  color: #000000 !important;
+  text-decoration: none !important;
   font-weight: 700;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(45,212,191,0.35);
@@ -287,8 +287,8 @@ nav a.nav-live-demo:hover {
   display: inline-block;
   padding: 0.72em 1.6em;
   background: transparent;
-  color: var(--text-primary);
-  text-decoration: none;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
   font-weight: 600;
   border-radius: 8px;
   border: 1.5px solid var(--teal-dark);
@@ -306,8 +306,8 @@ nav a.nav-live-demo:hover {
   display: inline-block;
   padding: 0.72em 1.6em;
   background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-  color: #000000;
-  text-decoration: none;
+  color: #000000 !important;
+  text-decoration: none !important;
   font-weight: 700;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(45,212,191,0.3);
