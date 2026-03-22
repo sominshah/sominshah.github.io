@@ -779,6 +779,33 @@ li {
   margin-bottom: 0.5em;
 }
 
+/* Employer/Company section heading */
+.section-employer-title {
+  margin-top: 2.5em;
+  margin-bottom: 0.3em;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.employer-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 20px;
+  padding: 0.2em 0.8em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.employer-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2em;
+}
+
 /* ======================== */
 /* Project Cards            */
 /* ======================== */
